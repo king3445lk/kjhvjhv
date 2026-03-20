@@ -1,175 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RCB Unbox 2026</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genetics & Health: Understanding BRCA</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --bg: #f4f7f6;
+            --text: #333;
+        }
 
-<style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #0b0f1a;
-    color: white;
-}
+        * { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 
-header {
-    background: linear-gradient(135deg, #ff0000, #7a0000);
-    padding: 40px 20px;
-    text-align: center;
-}
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
 
-header h1 {
-    font-size: 42px;
-    margin: 0;
-}
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
 
-.countdown {
-    margin-top: 15px;
-    font-size: 18px;
-}
+        header {
+            text-align: center;
+            border-bottom: 3px solid var(--secondary);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
 
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-}
+        h1 { color: var(--primary); margin: 0; }
+        h2 { color: var(--secondary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 30px; }
 
-.card {
-    background: #111827;
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    transition: 0.3s;
-    cursor: pointer;
-}
+        .interactive-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
 
-.card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 20px red;
-}
+        .interactive-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
+            border-color: var(--secondary);
+        }
 
-h2 {
-    color: gold;
-}
+        .badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+        }
 
-.hidden {
-    display: none;
-}
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
 
-button {
-    background: red;
-    border: none;
-    padding: 10px 15px;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
 
-button:hover {
-    background: darkred;
-}
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
 
-.ticket-box {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 0;
-    padding: 10px;
-    background: #1f2937;
-    border-radius: 8px;
-}
+        th { background-color: var(--primary); color: white; }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: black;
-}
-</style>
+        .prevention-box {
+            background: #e8f4fd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid var(--secondary);
+        }
+
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-    <h1>RCB Unbox 2026 🔥</h1>
-    <p>Experience the Ultimate Fan Event</p>
-    <div class="countdown" id="countdown"></div>
-</header>
-
 <div class="container">
+    <header>
+        <h1>Salpingo-Oophorectomy & BRCA Genetics</h1>
+        <p>A Comprehensive Guide to Preventive Health</p>
+    </header>
 
-    <div class="card" onclick="toggle('details')">
-        <h2>📅 Event Details (Click)</h2>
-        <div id="details" class="hidden">
-            <p>Date: 20 or 22 March 2026</p>
-            <p>Venue: Chinnaswamy Stadium, Bengaluru</p>
-            <p>Time: Evening (3–4 PM gates open)</p>
+    <section>
+        <h2>1. Surgical Overview</h2>
+        <p><strong>Salpingo-oophorectomy</strong> is the surgical removal of the fallopian tubes and ovaries.</p>
+        
+        <div class="grid">
+            <div class="interactive-card">
+                <span class="badge">Unilateral</span>
+                <p>Removal of one ovary and tube. Typically preserves hormonal balance and fertility.</p>
+            </div>
+            <div class="interactive-card">
+                <span class="badge">Bilateral (BSO)</span>
+                <p>Removal of both. Triggers surgical menopause but drastically reduces cancer risk.</p>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="card" onclick="toggle('tickets')">
-        <h2>🎟️ Ticket Info (Click)</h2>
-        <div id="tickets" class="hidden">
-            <p>Available on RCB website & BookMyShow</p>
-            <p>Sell out within minutes ⚡</p>
-            <button onclick="window.open('https://gemini.google.com/app', '_blank')">Book Now</button>
-        </div>
-    </div>
-
-    <div class="card" onclick="toggle('pricing')">
-        <h2>💰 Ticket Pricing (Click)</h2>
-        <div id="pricing" class="hidden">
-            <div class="ticket-box"><span>General</span><span>₹800 – ₹1200</span></div>
-            <div class="ticket-box"><span>Upper Tier</span><span>₹1200 – ₹2000</span></div>
-            <div class="ticket-box"><span>Premium</span><span>₹2000 – ₹3500</span></div>
-            <div class="ticket-box"><span>VIP</span><span>₹3500 – ₹6000</span></div>
-        </div>
-    </div>
-
-    <div class="card" onclick="toggle('highlights')">
-        <h2>🎉 Highlights (Click)</h2>
-        <div id="highlights" class="hidden">
+    <section>
+        <h2>2. How it Prevents Cancer</h2>
+        <div class="prevention-box">
             <ul>
-                <li>Jersey Launch 👕</li>
-                <li>Squad Introduction</li>
-                <li>Live DJ & Music 🎵</li>
-                <li>Fan Games 🎁</li>
+                <li><strong>Ovarian Cancer:</strong> Removes the primary site of origin (especially the fimbriae of the tubes).</li>
+                <li><strong>Breast Cancer:</strong> By removing ovaries, estrogen/progesterone levels drop. This "starves" hormone-sensitive tumors.</li>
             </ul>
         </div>
-    </div>
+    </section>
 
+    <section>
+        <h2>3. Understanding BRCA 1 & 2</h2>
+        <p>These are <strong>Tumor Suppressor Genes</strong>. Everyone has them, but their function changes if they are <em>mutated</em>.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Condition</th>
+                    <th>Gene Function</th>
+                    <th>Cancer Risk</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Normal</strong></td>
+                    <td>Repairs DNA breaks efficiently.</td>
+                    <td>Average (Baseline)</td>
+                </tr>
+                <tr>
+                    <td><strong>Mutated</strong></td>
+                    <td>DNA "typos" accumulate over time.</td>
+                    <td>High (Significantly elevated)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="interactive-card" style="border-left: 5px solid var(--accent);">
+            <strong>The "Two-Hit" Hypothesis:</strong>
+            <p>You inherit one "broken" copy. If the second healthy copy gets damaged later in life, the cell loses its defense and can become cancerous.</p>
+        </div>
+    </section>
+
+    <footer style="margin-top:40px; text-align:center; font-size: 0.9em; color: #777;">
+        <p>Educational Resource Only. Consult a medical professional for clinical advice.</p>
+    </footer>
 </div>
 
-<footer>
-    Made for RCB Fans ❤️
-</footer>
-
 <script>
-function toggle(id) {
-    let el = document.getElementById(id);
-    el.classList.toggle('hidden');
-}
-
-// Countdown Timer
-let eventDate = new Date("March 22, 2026 16:00:00").getTime();
-
-let timer = setInterval(function() {
-    let now = new Date().getTime();
-    let distance = eventDate - now;
-
-    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-    document.getElementById("countdown").innerHTML =
-        "⏳ Event starts in: " + days + "d " + hours + "h " + minutes + "m";
-
-    if (distance < 0) {
-        clearInterval(timer);
-        document.getElementById("countdown").innerHTML = "🔥 Event Live!";
-    }
-}, 1000);
+    // Simple interaction: Alert the user with a tip when clicking cards
+    const cards = document.querySelectorAll('.interactive-card');
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            const title = card.querySelector('.badge') ? card.querySelector('.badge').innerText : "Genetics Tip";
+            console.log("Exploring: " + title);
+        });
+    });
 </script>
 
 </body>
 </html>
-
