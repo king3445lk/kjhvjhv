@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RCB Unbox 2026</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0b0f1a;
+    color: white;
+}
+
+header {
+    background: linear-gradient(135deg, #ff0000, #7a0000);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 42px;
+    margin: 0;
+}
+
+.countdown {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    background: #111827;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px red;
+}
+
+h2 {
+    color: gold;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    background: red;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkred;
+}
+
+.ticket-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 10px;
+    background: #1f2937;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>RCB Unbox 2026 🔥</h1>
+    <p>Experience the Ultimate Fan Event</p>
+    <div class="countdown" id="countdown"></div>
+</header>
+
+<div class="container">
+
+    <div class="card" onclick="toggle('details')">
+        <h2>📅 Event Details (Click)</h2>
+        <div id="details" class="hidden">
+            <p>Date: 20 or 22 March 2026</p>
+            <p>Venue: Chinnaswamy Stadium, Bengaluru</p>
+            <p>Time: Evening (3–4 PM gates open)</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="toggle('tickets')">
+        <h2>🎟️ Ticket Info (Click)</h2>
+        <div id="tickets" class="hidden">
+            <p>Available on RCB website & BookMyShow</p>
+            <p>Sell out within minutes ⚡</p>
+            <button onclick="alert('Redirecting to booking...')">Book Now</button>
+        </div>
+    </div>
+
+    <div class="card" onclick="toggle('pricing')">
+        <h2>💰 Ticket Pricing (Click)</h2>
+        <div id="pricing" class="hidden">
+            <div class="ticket-box"><span>General</span><span>₹800 – ₹1200</span></div>
+            <div class="ticket-box"><span>Upper Tier</span><span>₹1200 – ₹2000</span></div>
+            <div class="ticket-box"><span>Premium</span><span>₹2000 – ₹3500</span></div>
+            <div class="ticket-box"><span>VIP</span><span>₹3500 – ₹6000</span></div>
+        </div>
+    </div>
+
+    <div class="card" onclick="toggle('highlights')">
+        <h2>🎉 Highlights (Click)</h2>
+        <div id="highlights" class="hidden">
+            <ul>
+                <li>Jersey Launch 👕</li>
+                <li>Squad Introduction</li>
+                <li>Live DJ & Music 🎵</li>
+                <li>Fan Games 🎁</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    Made for RCB Fans ❤️
+</footer>
+
+<script>
+function toggle(id) {
+    let el = document.getElementById(id);
+    el.classList.toggle('hidden');
+}
+
+// Countdown Timer
+let eventDate = new Date("March 22, 2026 16:00:00").getTime();
+
+let timer = setInterval(function() {
+    let now = new Date().getTime();
+    let distance = eventDate - now;
+
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+    document.getElementById("countdown").innerHTML =
+        "⏳ Event starts in: " + days + "d " + hours + "h " + minutes + "m";
+
+    if (distance < 0) {
+        clearInterval(timer);
+        document.getElementById("countdown").innerHTML = "🔥 Event Live!";
+    }
+}, 1000);
+</script>
+
+</body>
+</html>
